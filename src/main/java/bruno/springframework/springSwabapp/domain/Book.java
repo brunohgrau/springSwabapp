@@ -1,8 +1,5 @@
 package bruno.springframework.springSwabapp.domain;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Set;
 @Entity
@@ -12,6 +9,7 @@ public class Book {
     private Long id;
     private String title;
     private String isbn;
+    @ManyToMany
     private Set<Author> authors;
 
     public Book() {
