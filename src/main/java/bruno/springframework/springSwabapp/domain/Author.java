@@ -1,6 +1,5 @@
 package bruno.springframework.springSwabapp.domain;
 import jakarta.persistence.*;
-
 import java.util.Objects;
 import java.util.Set;
 @Entity
@@ -53,6 +52,17 @@ Author {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 
     @Override
